@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Booking System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1><i class="fa-solid fa-couch"></i> Seat Booking System</h1>
+            <p>Select your perfect seat for an amazing experience</p>
+        </header>
+
+        <!-- Stats Dashboard -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="icon"><i class="fa-solid fa-film"></i></div>
+                <div class="info">
+                    <h2 id="total-seats">50</h2>
+                    <span>TOTAL SEATS</span>
+                </div>
+            </div>
+            <div class="stat-card available-card">
+                <div class="icon"><i class="fa-solid fa-sparkles"></i></div>
+                <div class="info">
+                    <h2 id="available-count">47</h2>
+                    <span>AVAILABLE <span id="available-percent" class="small-percent">94%</span></span>
+                </div>
+            </div>
+            <div class="stat-card booked-card">
+                <div class="icon"><i class="fa-solid fa-ticket"></i></div>
+                <div class="info">
+                    <h2 id="booked-count">3</h2>
+                    <span>BOOKED <span id="booked-percent" class="small-percent">6%</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div class="progress-bar">
+                <div id="booked-bar" class="bar-segment booked"></div>
+                <!-- Available bar takes up remaining space implicitly or explicitly -->
+                <div class="bar-label-overlay"><span id="available-text-bar">47 Available</span></div>
+            </div>
+        </div>
+
+        <!-- Screen -->
+        <div class="screen-container">
+            <div class="screen-glow">SCREEN</div>
+        </div>
+
+        <!-- Seat Grid Layout -->
+        <div class="cinema-layout">
+            <!-- Row labels will be generated or hardcoded on the left -->
+            <div id="seat-map" class="seat-map">
+                <!-- Javascript will populate this -->
+            </div>
+        </div>
+        
+        <div class="reset-area">
+             <button id="reset-btn" class="reset-btn"><i class="fa-solid fa-rotate-right"></i> Reset All Seats</button>
+        </div>
+    </div>
+
+    <!-- Hidden Toast -->
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
